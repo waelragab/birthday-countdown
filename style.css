@@ -7,29 +7,23 @@ body{
     font-family: "Roboto";
     overflow-x: hidden;
 }
-img{
-    width: 100%;
-}
 .body-container{
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 20px;
     background: #F1F8FD;
    
 }
 
-.body-container .img-container{
-    height: 400px;
-    background: url('./images/image.jpg') center top /cover no-repeat;
+.body-container img{
+    width: 600px;
     box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
     border: 1px solid #333;
-    min-width: 300px;
-     transform: scale(0.9);
+    margin: 0 auto;
 }
 .body-container .text-container{
     display: flex;
@@ -71,18 +65,37 @@ img{
     font-size: 32px;
     font-weight: bold;
 }
-@media (max-width: 765px) {
+@media (max-width: 1067px) {
     .body-container{
     grid-template-columns: 1fr;
     gap: 5px;
-    padding: 50px;
+    justify-content: center;
+    align-items: center;
 }
 .body-container .text-container{
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.body-container .img-container{
-    height: 40vh;
+.body-container img{
+    width: 600px;
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 765px) {
+    .body-container{
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+.body-container .text-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.body-container img{
+    width: 400px;
+    margin: 0 auto;
 }
 }
