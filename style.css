@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto";
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+}
+.body-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    background: #F1F8FD;
+   
+}
+
+.body-container .img-container{
+    height: 400px;
+    background: url('./images/image.png') center top /cover no-repeat;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+    border: 1px solid #333;
+    min-width: 300px;
+     transform: scale(0.9);
+}
+.body-container .text-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+     transform: scale(0.9);
+}
+.body-container .text-container h1{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.body-container .text-container h4, .body-container .text-container h4 span{
+    font-size: 18px;
+}
+.body-container .text-container p{
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+.body-container .text-container .countdown{
+    display: flex;
+    gap: 20px;
+    
+}
+.body-container .text-container .countdown p{
+    
+    background-color: #122734;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.body-container .text-container .countdown p span{
+    display: block;
+}
+.body-container .text-container span{
+    font-size: 32px;
+    font-weight: bold;
+}
+@media (max-width: 765px) {
+    .body-container{
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 50px;
+}
+.body-container .text-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.body-container .img-container{
+    height: 40vh;
+}
+}
